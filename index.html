@@ -27,7 +27,9 @@
       .getElementById('btn')
       .addEventListener('click', function () {
         console.log('h5PostMessage start');
+        window.qq.miniProgram.h5PostMessage('222222222222');
         window.qq.miniProgram.h5PostMessage({ test: '11111111' });
+        window.qq.miniProgram.h5PostMessage({ test: '11111111', test1: '3333333333' });
       }, false);
   </script>
 </html>
