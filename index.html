@@ -15,10 +15,14 @@
   </head>
   <body>
     <div>this is webview-test 页面</div>
+    <pre id="text"></pre>
     <button id="btn">点击提交</button>
   </body>
   <script>
-    window.qq.miniProgram.h5OnMessage((data) => { console.log(data) })
+    window.qq.miniProgram.h5OnMessage((data) => { 
+      console.log(data);
+      document.getElementById('text').innerText = JSON.stringify(data, null, 2);
+     })
     document
       .getElementById('btn')
       .addEventListener('click', function () {
