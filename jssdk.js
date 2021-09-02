@@ -757,9 +757,11 @@
                       t("H5OnMessage", {
                           complete: function(n) {
                               var d = {};
-                              d.errMsg = n.errMsg || '';
                               for(var k in n.data) {
                                 d[k] = n.data[k]
+                              }
+                              for(var k in n) {
+                                d[k] = n[k]
                               }
                               typeof fun === 'function' && fun(d);
                           }
