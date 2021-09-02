@@ -18,6 +18,7 @@
     <button id="btn">点击提交</button>
   </body>
   <script>
+    window.qq.miniProgram.h5OnMessage((data) => { console.log(data) })
     document
       .getElementById('btn')
       .addEventListener('click', function () {
