@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>webview-test</title>
     <script src="./jssdk.js"></script>
     <script>
-//     window.qq.miniProgram.h5OnMessage((data) => { console.log(data) })
-       console.log('h5PostMessage start');
-       setTimeout(() => {
-	  window.qq.miniProgram.h5PostMessage({ data: '1111111' });
-	}, 1000);
+      // window.qq.miniProgram.h5OnMessage((data) => { console.log(data) })
+      // setTimeout(() => {
+      //   window.qq.miniProgram.h5PostMessage({ data: '1111111' });
+      // }, 3000);
     </script>
   </head>
   <body>
-     <div>this is webview-test 页面</div>
+    <div>this is webview-test 页面</div>
+    <button id="btn">点击提交</button>
   </body>
+  <script>
+    document
+      .getElementById('btn')
+      .addEventListener('click', function () {
+        console.log('h5PostMessage start');
+        window.qq.miniProgram.h5PostMessage({ data: '1111111' });
+      }, false);
+  </script>
 </html>
