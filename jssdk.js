@@ -765,7 +765,7 @@
                   f(function() {
                       i("invokeMiniProgramAPI", {
                           name: "customWebviewOnMessage",
-                          arg: e.data || {}
+                          arg: e || {}
                       }, e)
                   })
               },
