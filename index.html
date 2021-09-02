@@ -21,7 +21,7 @@
   <script>
     window.qq.miniProgram.h5OnMessage((data) => { 
       console.log(data);
-      document.getElementById('text').innerText = JSON.stringify(data, null, 2);
+      document.getElementById('text').innerText +=  JSON.stringify(data, null, 2);
      })
     document
       .getElementById('btn')
