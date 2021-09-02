@@ -756,7 +756,12 @@
                   f(function() {
                       t("H5OnMessage", {
                           complete: function(n) {
-                              typeof fun === 'function' && fun(n);
+                              var d = {};
+                              d.errMsg = n.errMsg || '';
+                              for(var k in n.data) {
+                                d[k] = n.data[k]
+                              }
+                              typeof fun === 'function' && fun(d);
                           }
                       })
                   })
